@@ -66,7 +66,11 @@
         if ([fileManager fileExistsAtPath:[fileURL path] isDirectory:NULL]) {
             [fileManager removeItemAtURL:fileURL error:NULL];
         }
-        [fileManager moveItemAtURL:location toURL:fileURL error:NULL];
+        BOOL isSuccess = [fileManager moveItemAtURL:location toURL:fileURL error:NULL];
+        if (isSuccess) {
+            //缓存成功
+        }
+        
         
         
         dispatch_async(dispatch_get_main_queue(), ^{

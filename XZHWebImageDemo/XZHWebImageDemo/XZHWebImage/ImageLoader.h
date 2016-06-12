@@ -7,6 +7,21 @@
 //
 
 #import <Foundation/Foundation.h>
+typedef NS_ENUM(NSInteger, XZHImageCacheType) {
+    /**
+     * 没有缓存，网络请求下来
+     */
+    XZHImageCacheTypeNetworking,
+    /**
+     * 磁盘中读出
+     */
+    XZHImageCacheTypeDisk,
+    /**
+     * 内存中读出
+     */
+    XZHImageCacheTypeMemory
+};
+
 /**
  *  为什么图片不显示?
     1.没有请求地址.imgsrc.
