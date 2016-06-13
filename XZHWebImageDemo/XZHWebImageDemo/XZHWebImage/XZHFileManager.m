@@ -17,6 +17,7 @@ static char *queueName = "fileManagerQueue";
     dispatch_queue_t _queue;
 }
 @end
+
 @implementation XZHFileManager
 
 + (XZHFileManager *)sharedFileManager {
