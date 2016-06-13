@@ -19,6 +19,7 @@
 		AA3C790D1D06F2F50025C382 /* 1.png in Resources */ = {isa = PBXBuildFile; fileRef = AA3C790C1D06F2F50025C382 /* 1.png */; };
 		AA4B67BE1D0D0EE1004CD0F5 /* XZHImageLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = AA4B67BD1D0D0EE1004CD0F5 /* XZHImageLoader.m */; };
 		AA4B67C11D0D52B2004CD0F5 /* XZHImageCache.m in Sources */ = {isa = PBXBuildFile; fileRef = AA4B67C01D0D52B2004CD0F5 /* XZHImageCache.m */; };
+		AA4B67C41D0E935C004CD0F5 /* XZHFileManager.m in Sources */ = {isa = PBXBuildFile; fileRef = AA4B67C31D0E935C004CD0F5 /* XZHFileManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,6 +44,8 @@
 		AA4B67BD1D0D0EE1004CD0F5 /* XZHImageLoader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XZHImageLoader.m; sourceTree = "<group>"; };
 		AA4B67BF1D0D52B2004CD0F5 /* XZHImageCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XZHImageCache.h; sourceTree = "<group>"; };
 		AA4B67C01D0D52B2004CD0F5 /* XZHImageCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XZHImageCache.m; sourceTree = "<group>"; };
+		AA4B67C21D0E935C004CD0F5 /* XZHFileManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XZHFileManager.h; sourceTree = "<group>"; };
+		AA4B67C31D0E935C004CD0F5 /* XZHFileManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XZHFileManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +114,8 @@
 				AA4B67BD1D0D0EE1004CD0F5 /* XZHImageLoader.m */,
 				AA4B67BF1D0D52B2004CD0F5 /* XZHImageCache.h */,
 				AA4B67C01D0D52B2004CD0F5 /* XZHImageCache.m */,
+				AA4B67C21D0E935C004CD0F5 /* XZHFileManager.h */,
+				AA4B67C31D0E935C004CD0F5 /* XZHFileManager.m */,
 			);
 			path = XZHWebImage;
 			sourceTree = "<group>";
@@ -193,6 +198,7 @@
 				AA4B67BE1D0D0EE1004CD0F5 /* XZHImageLoader.m in Sources */,
 				AA3C78F01D06B9F20025C382 /* AppDelegate.m in Sources */,
 				AA3C79071D06BF840025C382 /* EGOImageView.m in Sources */,
+				AA4B67C41D0E935C004CD0F5 /* XZHFileManager.m in Sources */,
 				AA3C78ED1D06B9F20025C382 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -8,6 +8,8 @@
 
 #import "ViewController.h"
 #import "UIImageView+WebCache.h"
+#import "XZHFileManager.h"
+
 #define kScreenWidth [UIScreen mainScreen].bounds.size.width
 #define kImageUrl   @"http://static.cpsdna.com/upload/vmaster/20160509/16050916355572426.PNG"
 @interface ViewController ()<NSURLSessionDataDelegate>
@@ -45,7 +47,11 @@
 
 - (void)handleDownloadPicture {
     
-    
+//    self.imageView.image = [UIImage imageNamed:@"1"];
+//    NSData *data = UIImagePNGRepresentation(_imageView.image);
+//    NSString *documentRoot = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject];
+//    NSString *filePath = [documentRoot stringByAppendingPathComponent:@"AAA"];
+//    [[XZHFileManager sharedFileManager] writeFile:filePath data:data];
     [self request];
 
 }
@@ -60,7 +66,7 @@
         ///Users/gonghui/Library/Developer/CoreSimulator/Devices/80264F1F-2057-4B69-9ECC-BC89DA985CF1/data/Containers/Data/Application/164D1545-71B7-4DA9-BDBE-8BE440768B34/Documents
         
         NSURL *documentsDirectoryURL = [NSURL fileURLWithPath:documentsPath];
-        NSURL *fileURL = [documentsDirectoryURL URLByAppendingPathComponent:[[response URL] lastPathComponent]];
+        NSURL *fileURL = [documentsDirectoryURL URLByAppendingPathComponent:[[response URL] lastPathComponent]]; //截取url最后名字
         // 如果该路径下文件已经存在，就要先将其移除，在移动文件
         NSFileManager *fileManager = [NSFileManager defaultManager];
         if ([fileManager fileExistsAtPath:[fileURL path] isDirectory:NULL]) {

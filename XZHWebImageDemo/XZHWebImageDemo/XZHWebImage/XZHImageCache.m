@@ -8,9 +8,14 @@
 
 #import "XZHImageCache.h"
 
-
+//线程队列名称
+static char *queueName = "fileManagerQueue";
 
 @interface XZHImageCache ()
+{
+    //读写队列
+    dispatch_queue_t _queue;
+}
 @property (strong, nonatomic) NSCache *imageDataCache;
 @end
 
@@ -32,6 +37,13 @@
     });
     return imageCache;
 
+}
+- (instancetype)init {
+    self = [super init];
+    if (self) {
+        _queue = dispatch_queue_create(queueName, DISPATCH_QUEUE_CONCURRENT);
+    }
+    return self;
 }
 - (void)writeImageData:(NSData *)data forKey:(NSString *)key {
     [self.imageDataCache setObject:data forKey:key];
