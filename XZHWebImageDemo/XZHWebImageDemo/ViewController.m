@@ -89,8 +89,8 @@
     
 }
 - (NSString *)getDocumentsPath {
-    NSArray *documents = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
-    NSString *documentsPath = documents[0];
+    NSArray *documents = NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES);
+    NSString *documentsPath = documents.firstObject;
     return documentsPath;
 }
 

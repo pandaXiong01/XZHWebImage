@@ -22,6 +22,10 @@ typedef NS_ENUM(NSInteger, XZHImageCacheType) {
     XZHImageCacheTypeMemory
 };
 
+typedef void(^XZHWebImageLoadFinishedBlock)(NSData *imageData, NSError *error, XZHImageCacheType cacheType, BOOL finished, NSURL *imageURL);
+
 @interface XZHImageLoader : NSObject
+
+- (id)downloadImageWithURL:(NSURL *)url completed:(XZHWebImageLoadFinishedBlock)completedBlock;
 
 @end

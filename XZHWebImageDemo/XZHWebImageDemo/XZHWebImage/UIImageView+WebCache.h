@@ -16,6 +16,5 @@
 
 - (void)setImageWithURL:(NSString *)url placeholderImageName:(NSString *)placeholderName;
 
-- (void)setImageWithURL:(NSString *)url placeholderImageName:(NSString *)placeholderName options:(NSString *)options;
 
 @end
