@@ -1,4 +1,5 @@
 # XZHWebImage
+```
 /**
 *  返回imageUrl
 *
@@ -18,3 +19,4 @@
 *  @param placeholderName placeholderImageName
 */
 - (void)setImageWithURL:(NSString *)url placeholderImageName:(NSString *)placeholderName;
+```
