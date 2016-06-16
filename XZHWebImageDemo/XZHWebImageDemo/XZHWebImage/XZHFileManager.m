@@ -29,12 +29,7 @@ static char *queueName = "fileManagerQueue";
     return fileManager;
     
 }
-/**
- *      
- NSString *documentRoot = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject];
- NSString *filePath = [documentRoot stringByAppendingPathComponent:@"test.txt"];
 
- */
 - (instancetype)init
 {
     if(self = [super init]) {

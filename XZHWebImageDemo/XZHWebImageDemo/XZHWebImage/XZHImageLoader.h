@@ -7,25 +7,12 @@
 //
 
 #import <Foundation/Foundation.h>
-typedef NS_ENUM(NSInteger, XZHImageCacheType) {
-    /**
-     * 没有缓存，网络请求下来
-     */
-    XZHImageCacheTypeNetworking,
-    /**
-     * 磁盘中读出
-     */
-    XZHImageCacheTypeDisk,
-    /**
-     * 内存中读出
-     */
-    XZHImageCacheTypeMemory
-};
+#import "XZHImageCache.h"
 
 typedef void(^XZHWebImageLoadFinishedBlock)(NSData *imageData, NSError *error, XZHImageCacheType cacheType, BOOL finished, NSURL *imageURL);
 
 @interface XZHImageLoader : NSObject
 
-- (id)downloadImageWithURL:(NSURL *)url completed:(XZHWebImageLoadFinishedBlock)completedBlock;
+- (id)loadImageWithURL:(NSURL *)url completed:(XZHWebImageLoadFinishedBlock)completedBlock;
 
 @end

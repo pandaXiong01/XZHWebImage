@@ -7,11 +7,11 @@
 //
 #import "objc/runtime.h"
 #import "UIImageView+WebCache.h"
-#import "ImageLoader.h"
+#import "XZHImageLoader.h"
 
 static const void *imageURLKey = &imageURLKey;
 
-@interface UIImageView () <ImageLoaderDelegate>
+@interface UIImageView ()
 
 @end
 
@@ -43,10 +43,16 @@ static const void *imageURLKey = &imageURLKey;
         UIImage *image = [UIImage imageNamed:placeholderName];
         self.image = image;
     }
-    ImageLoader *loader = [[ImageLoader alloc] init];
-    loader.linkName = url; //设置请求地址
-    loader.delegate = self;//设置代理
-    [loader startLoadImage]; //开始下载图片
+    XZHImageLoader *loader = [[XZHImageLoader alloc] init];
+    [loader loadImageWithURL:[NSURL URLWithString:url] completed:^(NSData *imageData, NSError *error, XZHImageCacheType cacheType, BOOL finished, NSURL *imageURL) {
+        if (finished) {
+            dispatch_async(dispatch_get_main_queue(), ^{
+                NSLog(@"updating UIImageView");
+                //切换到主线程
+                self.image = [UIImage imageWithData:imageData];
+            });
+        }
+    }];
     
 }
 

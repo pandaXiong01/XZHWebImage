@@ -7,7 +7,9 @@
 //
 
 #import <Foundation/Foundation.h>
-
+/**
+ *  未使用
+ */
 @interface XZHFileManager : NSObject
 + (XZHFileManager *)sharedFileManager;
 

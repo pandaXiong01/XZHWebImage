@@ -13,8 +13,6 @@
 		AA3C78F61D06B9F20025C382 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA3C78F41D06B9F20025C382 /* Main.storyboard */; };
 		AA3C78F81D06B9F20025C382 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AA3C78F71D06B9F20025C382 /* Assets.xcassets */; };
 		AA3C78FB1D06B9F20025C382 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA3C78F91D06B9F20025C382 /* LaunchScreen.storyboard */; };
-		AA3C79071D06BF840025C382 /* EGOImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = AA3C79041D06BF840025C382 /* EGOImageView.m */; };
-		AA3C79081D06BF840025C382 /* ImageLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = AA3C79061D06BF840025C382 /* ImageLoader.m */; };
 		AA3C790B1D06EE400025C382 /* UIImageView+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = AA3C790A1D06EE400025C382 /* UIImageView+WebCache.m */; };
 		AA3C790D1D06F2F50025C382 /* 1.png in Resources */ = {isa = PBXBuildFile; fileRef = AA3C790C1D06F2F50025C382 /* 1.png */; };
 		AA4B67BE1D0D0EE1004CD0F5 /* XZHImageLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = AA4B67BD1D0D0EE1004CD0F5 /* XZHImageLoader.m */; };
@@ -33,10 +31,6 @@
 		AA3C78F71D06B9F20025C382 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AA3C78FA1D06B9F20025C382 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AA3C78FC1D06B9F20025C382 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		AA3C79031D06BF840025C382 /* EGOImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EGOImageView.h; sourceTree = "<group>"; };
-		AA3C79041D06BF840025C382 /* EGOImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EGOImageView.m; sourceTree = "<group>"; };
-		AA3C79051D06BF840025C382 /* ImageLoader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageLoader.h; sourceTree = "<group>"; };
-		AA3C79061D06BF840025C382 /* ImageLoader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageLoader.m; sourceTree = "<group>"; };
 		AA3C79091D06EE400025C382 /* UIImageView+WebCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+WebCache.h"; sourceTree = "<group>"; };
 		AA3C790A1D06EE400025C382 /* UIImageView+WebCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+WebCache.m"; sourceTree = "<group>"; };
 		AA3C790C1D06F2F50025C382 /* 1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 1.png; sourceTree = "<group>"; };
@@ -104,12 +98,8 @@
 		AA3C79021D06BF790025C382 /* XZHWebImage */ = {
 			isa = PBXGroup;
 			children = (
-				AA3C79031D06BF840025C382 /* EGOImageView.h */,
-				AA3C79041D06BF840025C382 /* EGOImageView.m */,
 				AA3C79091D06EE400025C382 /* UIImageView+WebCache.h */,
 				AA3C790A1D06EE400025C382 /* UIImageView+WebCache.m */,
-				AA3C79051D06BF840025C382 /* ImageLoader.h */,
-				AA3C79061D06BF840025C382 /* ImageLoader.m */,
 				AA4B67BC1D0D0EE1004CD0F5 /* XZHImageLoader.h */,
 				AA4B67BD1D0D0EE1004CD0F5 /* XZHImageLoader.m */,
 				AA4B67BF1D0D52B2004CD0F5 /* XZHImageCache.h */,
@@ -192,12 +182,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				AA3C78F31D06B9F20025C382 /* ViewController.m in Sources */,
-				AA3C79081D06BF840025C382 /* ImageLoader.m in Sources */,
 				AA3C790B1D06EE400025C382 /* UIImageView+WebCache.m in Sources */,
 				AA4B67C11D0D52B2004CD0F5 /* XZHImageCache.m in Sources */,
 				AA4B67BE1D0D0EE1004CD0F5 /* XZHImageLoader.m in Sources */,
 				AA3C78F01D06B9F20025C382 /* AppDelegate.m in Sources */,
-				AA3C79071D06BF840025C382 /* EGOImageView.m in Sources */,
 				AA4B67C41D0E935C004CD0F5 /* XZHFileManager.m in Sources */,
 				AA3C78ED1D06B9F20025C382 /* main.m in Sources */,
 			);
