@@ -11,13 +11,13 @@
 
 static const void *imageURLKey = &imageURLKey;
 
-@interface UIImageView ()
-
-@end
 
 @implementation UIImageView (WebCache)
 - (NSString *)imageURL {
     return objc_getAssociatedObject(self, imageURLKey);
+}
+- (void)setImageURL:(NSString *)imageURL {
+    objc_setAssociatedObject(self, imageURLKey, imageURL, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
 
 - (void)setImageWithURL:(NSString *)url {
@@ -42,6 +42,7 @@ static const void *imageURLKey = &imageURLKey;
     if (placeholderName) {
         UIImage *image = [UIImage imageNamed:placeholderName];
         self.image = image;
+        
     }
     XZHImageLoader *loader = [[XZHImageLoader alloc] init];
     [loader loadImageWithURL:[NSURL URLWithString:url] completed:^(NSData *imageData, NSError *error, XZHImageCacheType cacheType, BOOL finished, NSURL *imageURL) {

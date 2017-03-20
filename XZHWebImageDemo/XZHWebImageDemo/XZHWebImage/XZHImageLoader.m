@@ -9,12 +9,11 @@
 #import "XZHImageLoader.h"
 
 @interface XZHImageLoader ()
-
-//@property (nonatomic, strong) NSURL *imageURL; //连接地址字符串
 @property (nonatomic, copy) XZHWebImageLoadFinishedBlock finishedBlock;
 @end
 @implementation XZHImageLoader
-//(NSData *imageData, NSError *error, XZHImageCacheType cacheType, BOOL finished, NSURL *imageURL);
+
+
 - (id)loadImageWithURL:(NSURL *)url completed:(XZHWebImageLoadFinishedBlock)completedBlock {
     
     //判断本地之前是否缓存过该图片
